@@ -1,0 +1,75 @@
+\documentclass[mathserif, 10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amsfonts}
+\usepackage{appendixnumberbeamer}
+
+
+\title{Tutorial: python y flavio}
+\subtitle{Jorge Alda,\\ Universidad de Zaragoza/CAPA\hspace{4em} \texttt{jalda@unizar.es} }
+\author[Jorge Alda]{Slides Example}
+
+\date{Mayo 2022}
+
+
+
+\usetheme{Zaragoza}
+\usecolortheme{Unizar}
+\titlepagelogoA{\includegraphics[width=6cm]{logos/CAPA.png}}
+\titlepagelogoB{\includegraphics[width=4cm]{logos/dftuz2.png}}
+
+
+\newcommand\colorcite[1]{{\scriptsize\color{blue}#1}}
+
+\begin{document}
+\begin{frame}[noframenumbering,plain]
+
+    \titlepage
+
+\end{frame}
+
+
+\begin{frame}\frametitle{venv}
+    Un ambiente virtual (venv) permite ``encapsular'' los paquetes de \texttt{python} que necesitas de forma aislada del resto del sistema operativo.
+
+    ~
+
+    Para crear un venv en el directorio actual:
+    \begin{block}{Linux}
+        \texttt{python3 -m venv envname}
+    \end{block}
+    \begin{block}{Windows}
+        \texttt{C:\textbackslash Path\textbackslash to\textbackslash python -m venv envname}
+    \end{block}
+
+    Esto crea un subdirectorio \texttt{envname} con los archivos necesarios para usar el \texttt{venv}.
+\end{frame}
+
+\begin{frame}\frametitle{venv}
+
+    Ahora hay que activar el texttt{venv}
+    \begin{block}{Linux}
+        \texttt{source envname/bin/activate}
+    \end{block}
+    \begin{block}{Windows}
+        \texttt{envname\textbackslash Scripts\textbackslash Activate.ps1}
+    \end{block}
+
+    Comprueba que estás dentro del \texttt{venv} usando el comando \texttt{python -m pip list}.
+
+    Para salir del \texttt{venv}, usa el comando
+    \begin{block}{Windows \& Linux}
+        deactivate
+    \end{block}
+\end{frame}
+
+\begin{frame}\frametitle{Preparando el venv}
+    Activa el \texttt{venv}, e instala los siguientes paquetes usando \texttt{pip}:
+    \begin{itemize}
+        \item numpy
+        \item scipy
+        \item matplotlib
+        \item flavio
+    \end{itemize}
+\end{frame}
+
+\end{document}
