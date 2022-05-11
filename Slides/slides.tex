@@ -98,7 +98,7 @@
 \end{frame}
 
 \begin{frame}\frametitle{Haciendo cambios en git}
-\begin{enumerate}\setcounter{enumi}{3}
+\begin{enumerate}\setcounter{enumi}{2}
 \item Crea un archivo test.txt en el directorio y guárdalo.
 \item Ejecuta \texttt{git status}. Verás que el archivo test.txt ha sido modificado desde la última entrada en la historia del repositorio.
 \item Ejecuta \texttt{git add test.txt}. Esto añade el archivo a la lista de preparación (stage), pero aún no a la historia.
@@ -108,6 +108,27 @@
 \end{enumerate}
     
 
+\end{frame}
+
+\begin{frame}\frametitle{Sincronizando con GitHub}
+    \begin{enumerate}\setcounter{enumi}{8}
+        \item Para subir los nuevos commits a GitHub, usa \texttt{git push}.
+        \item En GitHub puedes ver la historia del repositorio.
+        \item Si hay cambios en GitHub que no están en el ordenador, puedes incorporarlos con \texttt{git pull}. \textbf{Importante!:} Haz pull antes de commit+push.
+    \end{enumerate}
+
+    GitHub tiene otras funcionalidades avanzadas (issues, pull requests,...) que no utilizaremos de momento.
+
+\end{frame}
+
+\begin{frame}\frametitle{Ramas}
+    Hasta ahora, solo hemos usado historias lineales: cada commit solo tiene un predecesor o un sucesor. Una historia con varias ramas sirve, por ejemplo, para probar nuevos conceptos mientras se mantiene (y desarrolla) la versión original.
+
+    \begin{enumerate}
+        \item Crea una rama con el comando \texttt{git branch rama1}. La rama rama1 tiene la misma historia hasta este punto que la rama main.
+        \item Puedes ver todas las ramas del repositorio (locales+remotas) con \texttt{git branch -a}
+        \item Para cambiar la rama activa, usa \texttt{git checkout rama1}.
+    \end{enumerate}
 \end{frame}
 
 \begin{frame}\frametitle{Fusionar ramas}
@@ -121,7 +142,6 @@
     ~
 
     Para fusionar dos ramas, activa la rama que recibirá la fusión (en este caso main), y ejecuta \texttt{git merge rama1}
-
 \end{frame}
 
 \end{document}
