@@ -68,8 +68,46 @@
         \item numpy
         \item scipy
         \item matplotlib
+\item jupyter
         \item flavio
     \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{git y GitHub}
+
+    \begin{itemize}
+        \item \texttt{git} es un sistema de control de versiones. Permite mantener una historia de todos los cambios de un proyecto de código y trabajar en paralelo con varias versiones (ramas).
+              \begin{itemize}
+                  \item Cliente de línea de comandos en \url{https://git-scm.com/downloads}
+                  \item También hay clientes gráficos o integrados en IDE (VSCode).
+              \end{itemize}
+        \item \texttt{GitHub} es un servidor de git. Permite mantener una copia ``en la nube'' del proyecto y su historia, editar de forma colaborativa, y compartir el código (open software).
+              \begin{itemize}
+                  \item Crear una cuenta en \url{https://github.com/}
+                  \item Cliente de línea de comandos en \url{https://github.com/cli/cli}
+              \end{itemize}
+        \item Conecta \texttt{git} con la cuenta de \texttt{GitHub} con el comando \texttt{gh auth login} y sigue las instrucciones (cuenta de \texttt{GitHub} básica, protocolo HTTPS, autenticación usando browser).
+    \end{itemize}
+\end{frame}
+
+\begin{frame}\frametitle{Empezando con git}
+    \begin{enumerate}
+        \item Entra en github.com con tu cuenta, pulsa el botón + en la esquina superior derecha y crea un nuevo repositorio. El nombre del repositorio es test-github, y añade un README.
+        \item En la página del repositorio, pulsa el botón verde ``Code'' y copia la dirección. En la consola de comandos, navega al directorio donde quieras crear tu proyecto y ejecuta \texttt{git clone https://github.com/your-name/test-git.git}. El archivo README.md se habrá copiado a tu ordenador.
+\end{enumerate}
+\end{frame}
+
+\begin{frame}\frametitle{Haciendo cambios en git}
+\begin{enumerate}\setcounter{enumi}{3}
+\item Crea un archivo test.txt en el directorio y guárdalo.
+\item Ejecuta \texttt{git status}. Verás que el archivo test.txt ha sido modificado desde la última entrada en la historia del repositorio.
+\item Ejecuta \texttt{git add test.txt}. Esto añade el archivo a la lista de preparación (stage), pero aún no a la historia.
+\item Vuelve a ejecutar \texttt{git status}, el archivo está en el stage.
+\item Una vez que hayas preparado todos los archivos modificados, puedes añadir una nueva entrada (commit) a la historia local con el comando \texttt{git commit -m "Descripción del commit"} (intenta ser descriptivo).
+\item Puedes ver todos los commits locales con \texttt{git log}.
+\end{enumerate}
+    
+
 \end{frame}
 
 \end{document}
