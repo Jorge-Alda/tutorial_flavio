@@ -46,7 +46,7 @@
 
 \begin{frame}\frametitle{venv}
 
-    Ahora hay que activar el texttt{venv}
+Ahora hay que activar el \texttt{venv}
     \begin{block}{Linux}
         \texttt{source envname/bin/activate}
     \end{block}
@@ -128,6 +128,7 @@
         \item Crea una rama con el comando \texttt{git branch rama1}. La rama rama1 tiene la misma historia hasta este punto que la rama main.
         \item Puedes ver todas las ramas del repositorio (locales+remotas) con \texttt{git branch -a}
         \item Para cambiar la rama activa, usa \texttt{git checkout rama1}.
+\item Para subir la nueva rama a GitHub (solo la primera vez), usa \texttt{git push --set-upstream origin rama1}
     \end{enumerate}
 \end{frame}
 
@@ -142,6 +143,32 @@
     ~
 
     Para fusionar dos ramas, activa la rama que recibirá la fusión (en este caso main), y ejecuta \texttt{git merge rama1}
+\end{frame}
+
+\begin{frame}\frametitle{Segunda parte del tutorial}
+
+    Para calcular los observables usaremos el paquete \texttt{flavio}. Puedes ver su código en \url{https://github.com/flav-io/flavio} (no hace falta que clones el repo).
+
+    ~
+
+    Para continuar con el resto del tutorial, clona \url{https://github.com/Jorge-Alda/tutorial_flavio}
+
+
+    El repositorio tiene dos directorios: Slides, con estas diapositivas, y Python, que contiene el cuaderno de Jupyter que usaremos a continuación.
+\end{frame}
+
+\begin{frame}\frametitle{Jupyter}
+
+    Los cuadernos de \texttt{jupyter} sirven para guardar una sesión interactiva de Python (inputs + outputs), junto con comentarios de texto, los plots generados, etc.
+
+    ~
+
+    Activa el venv que has creado antes, y lanza \texttt{jupyter} con el comando \texttt{jupyter notebook}. Esto iniciará el servidor de \texttt{jupyter}, y lo abrirá en el navegador.
+
+    ~
+
+    En la interfaz de \texttt{jupyter}, localiza el directorio Python y abre el archivo \texttt{flavio.ipynb}
+
 \end{frame}
 
 \end{document}
