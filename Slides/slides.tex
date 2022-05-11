@@ -110,4 +110,18 @@
 
 \end{frame}
 
+\begin{frame}\frametitle{Fusionar ramas}
+
+    Puedes comparar los contenidos de dos ramas, línea por línea, con el comando \texttt{git diff main rama1}.
+
+    ~
+
+    Para fusionar dos ramas, git hace una comparación a 3, entre el último commit de cada rama y el commit en el que sus historias se bifurcaron. En las líneas de código en las que hay una coincidencia de al menos dos de las fuentes, git se queda con la versión que no está en el origen de la bifurcación. Si las tres fuentes discrepan, hay un conflicto de fusión, que hay que solucionar a mano.
+
+    ~
+
+    Para fusionar dos ramas, activa la rama que recibirá la fusión (en este caso main), y ejecuta \texttt{git merge rama1}
+
+\end{frame}
+
 \end{document}
